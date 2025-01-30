@@ -30,7 +30,7 @@ const selectedDifficulty = ref("beginner");
 const hintsUsed = ref(0);
 const startTime = ref(Date.now());
 const elapsedTime = ref(0);
-const timerInterval = ref<number | null>(null);
+const timerInterval = ref<ReturnType<typeof setInterval> | null>(null);
 
 const formattedTime = computed(() => {
   const minutes = Math.floor(elapsedTime.value / 60);
